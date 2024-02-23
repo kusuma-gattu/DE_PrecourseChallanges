@@ -16,7 +16,7 @@ Then run pytest using the same command and you should see all the tests pass.
 
 def count_to_two():
     counter = 0
-    counter += 1  # <- change this!!
+    counter += 2  # <- change this!!
     return counter
 
 # Do not change code below this line

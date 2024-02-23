@@ -25,7 +25,15 @@ Returns
 
 def delete_many_passwords(users):
     # Your code here
-    pass
+    index = 0
+    # iterate throug array of users
+    for user in users:
+        for key in user.keys():
+            if(key == 'password'):
+                del users[index]['password']
+                break
+        index += 1   
+    return users
 
 
 def test_changes_single_dict():

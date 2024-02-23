@@ -8,10 +8,20 @@ remove_item([1, 2, 3], 1) # returns [1, 3]
 remove_item([3], 0) # returns []
 '''
 
-
+from copy import deepcopy
 def remove_item(items, n):
     # your code here
-    pass
+    print(items, n)
+    result = [];
+    # iterating through the indexes of items
+    for index in range(len(items)):
+        # checking position of the list in order to delete item at 'n' position
+        if index == n:
+            # creating a deep copy of the list, so that refence will not be shared. 
+            result = deepcopy(items)
+            del result[index]
+    print(result, items)       
+    return result;
 
 
 def test_returns_a_list_without_the_specified_element():

@@ -16,8 +16,11 @@ get_sandwich_filling(['a', 'b', 'c', 'd']) # returns ['b', 'c']
 
 def get_sandwich_filling(sandwich):
     # your code here
-    pass
-
+    # removing first element of the list
+    del sandwich[0]
+    # removing last element of the list
+    del sandwich[-1]
+    return sandwich
 
 def test_returns_a_list_with_a_single_filling():
     cheese_sandwich = ['bread', 'lonely slice of cheese', 'bread']

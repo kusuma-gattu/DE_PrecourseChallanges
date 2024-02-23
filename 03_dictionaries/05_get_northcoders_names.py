@@ -23,7 +23,18 @@ get_northcoders_names(northcoders) # returns ['Callum', 'Carrie']
 
 def get_northcoders_names(northcoders):
     # Your code here
-    pass
+    northcoders_names = []
+    # initialize the index to access the list of nothcoders
+    index = 0
+    # iterate over list
+    for coder in northcoders:
+        # checking if name is present
+        if 'name' in coder.keys():
+            northcoders_names.append(northcoders[index]['name'])
+        # incrementing the index for every iteration
+        index += 1
+    return northcoders_names
+            
 
 
 def test_returns_empty_list_if_input_empty():

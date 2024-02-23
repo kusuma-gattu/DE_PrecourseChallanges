@@ -13,7 +13,12 @@ flatten_list_by_one([[1], [2], [[3, 4]]])  # returns [1, 2, [3, 4]]
 
 def flatten_list_by_one(nested_lists):
     # your code here
-    pass
+    new_list = []
+    for sublist in nested_lists:
+        if isinstance(sublist, list):
+            for item in sublist:
+                    new_list.append(item)
+    return new_list       
 
 
 def test_removes_single_layer_of_nesting():
