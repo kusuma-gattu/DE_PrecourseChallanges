@@ -25,6 +25,7 @@ def replace_letters_with_x(string):
             result.append('X')
         else:
             result.append(string[index])
+    # converting the list to string
     return ''.join(result)
 
 

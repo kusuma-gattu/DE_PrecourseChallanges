@@ -25,11 +25,28 @@ one is the right way round with less than 3 pieces of fruit
 
 """
 
-
+import itertools
 def find_wrong_way_fruit(orchard):
     # Your code here
-    pass
 
+    list_length = len(orchard)
+    if  list_length < 3:
+        return 0
+    else:
+        for index in range(list_length):
+            if index == 0:
+                if orchard[index] != orchard[-1] and  orchard[index] != orchard[index+1]:
+                    return index
+            elif index == (list_length-1):
+                if orchard[-1]!= orchard[0]:
+                    return index
+                
+            else:
+                if orchard[index] != orchard[index+1] and index != list_length-2:
+                    return index
+                     
+   
+    
 
 def test_returns_zero_for_singleton_list():
     assert find_wrong_way_fruit(['apple']) == 0

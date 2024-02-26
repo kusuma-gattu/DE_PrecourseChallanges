@@ -19,7 +19,12 @@ sum_digits_from_string('northcoders') # returns 0
 
 def sum_digits_from_string(string):
     # Your code here
-    pass
+    num = 0
+    for char in string:
+        if char.isnumeric():
+            # converting to integer
+            num += int(char)
+    return num
 
 
 def test_empty_string():

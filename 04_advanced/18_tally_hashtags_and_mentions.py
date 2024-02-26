@@ -15,7 +15,9 @@ tally_hashtags_and_mentions(tweet) # returns {'hashtags': 2, 'mentions': 1}
 
 def tally_hashtags_and_mentions(tweet):
     # Your code here
-    pass
+    return { 'hashtags': tweet.count('#'),
+            'mentions': tweet.count('@')
+    }
 
 
 def test_empty_tweet():

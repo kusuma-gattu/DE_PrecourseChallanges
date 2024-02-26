@@ -20,7 +20,14 @@ get_factorials([]) # returns []
 
 def get_factorials(numbers):
     # Your code here
-    pass
+    result = []
+    for num in numbers:
+        product = 1
+        while num >= 1:
+            product *= num
+            num -= 1
+        result.append(product)
+    return result
 
 
 def test_empty_list_generates_empty_list():

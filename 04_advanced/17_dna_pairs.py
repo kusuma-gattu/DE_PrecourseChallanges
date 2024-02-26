@@ -20,10 +20,24 @@ dna_pairs('gat') # returns ['GC', 'AT', 'TA']
 
 """
 
-
+import re
 def dna_pairs(dna_string):
     # Your code here
-    pass
+    pairs = []
+    chars= list(dna_string.upper())
+    for char in chars:
+        if re.findall('[GCTA]',char):
+            if char == 'G':
+                pairs.append('GC')
+            elif char == 'C':
+                pairs.append('CG')
+            elif char == 'T':
+                pairs.append('TA')
+            else:
+                pairs.append('AT')
+    return pairs
+                
+    
 
 
 def test_empty_string_produces_empty_list():

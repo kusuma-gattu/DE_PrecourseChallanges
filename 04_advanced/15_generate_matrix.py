@@ -19,7 +19,16 @@ generate_matrix(3) # returns [
 
 def generate_matrix(number):
     # Your code here
-    pass
+    result = []
+    for i in range(number):
+        # init row 
+        row = []
+        for column in range(number):
+            # adding ele into row
+            row.append(None)
+        # adding row to the list
+        result.append(row)
+    return result
 
 
 def test_zero_generates_empty_list():
