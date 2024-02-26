@@ -6,15 +6,13 @@ get_even_nums([1, 2, 3]) # returns [2]
 '''
 
 
-def get_even_nums(nums=list):
+def get_even_nums(nums):
     # your code here
     result = []
-    # nums is a list containing some numbers.
-    for i in nums:
-        # number is divided by 2, even numbers will get 0 as reminder
-        if i%2 == 0:
-            result.append(i);
-    return result;
+    for num in nums:
+        if num%2 == 0:
+            result.append(num)
+    return result
 
 
 def test_returns_an_empty_list_for_no_numbers():

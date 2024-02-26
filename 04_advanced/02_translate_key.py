@@ -29,10 +29,19 @@ translate_key(student, 'prénom', 'first_name') # should return the following:
 
 """
 
-
+from copy import deepcopy
 def translate_key(student, key_to_change, translation):
     # Your code here
-    pass
+    result = deepcopy(student)
+    print(student, key_to_change, translation)
+    if len(student.keys()) == 0:
+        return {}
+    elif key_to_change not in result.keys():
+        return result
+    else:
+        result[translation] = result[key_to_change]
+        del result[key_to_change]
+        return result
 
 
 def test_return_copy_of_empty_data_unchanged():

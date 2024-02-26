@@ -12,8 +12,7 @@ merge_lists([1, 2], [3, 4]) # returns [1, 2, 3, 4]
 
 def merge_lists(list1, list2):
     # your code here
-    new_list = list1 + list2
-    return new_list
+    pass
 
 
 def test_returns_two_single_elements_merged():

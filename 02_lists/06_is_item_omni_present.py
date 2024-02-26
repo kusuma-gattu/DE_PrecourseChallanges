@@ -17,15 +17,8 @@ present in two lists
 
 def is_item_omnipresent(lists, item):
     # your code here
-    result = []
-    for sublist in lists:
-        for i in sublist:
-            # checking item is present in the sublist, if so adding 1 to the result
-            if i == item:
-                result.append(1)
-                break
-    # if item is omni present then true            
-    return len(result) == len(lists)
+    pass
+
 
 def test_returns_false_if_item_missing_from_all():
     return_value = is_item_omnipresent([[1], [2]], 3)

@@ -24,11 +24,7 @@ add_property_to_product(
 
 def add_property_to_product(product, property, value):
     # Your code here
-    # checking whether the property is not type of list or dictionary.
-    if not isinstance(property,(list,dict)):
-        product[property] = value
-    
-    return product
+    pass
 
 
 def test_empty_product_gains_single_property():

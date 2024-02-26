@@ -17,14 +17,7 @@ flip_booleans([]) # returns []
 
 def flip_booleans(bools):
     # Your code here
-    # iterate through the list
-    result = []
-    for value in bools:
-        if value is True:
-            result.append(False)
-        else:
-            result.append(True)
-    return result 
+    pass
 
 
 def test_empty_list_returns_empty_list():

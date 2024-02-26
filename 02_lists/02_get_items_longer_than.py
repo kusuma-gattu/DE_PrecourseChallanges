@@ -13,12 +13,12 @@ get_items_longer_than(['a','bb','ccc'], 4) # returns [];
 
 def get_items_longer_than(strs, max_len):
     # your code here
-    result = [];
-    for i in strs:
-        # checking if length of string is greater than max_len
-        if len(i) > max_len:
-            result.append(i)
-    return result;
+    result = []
+    for str in strs:
+        if len(str) > max_len:
+            result.append(str)
+    return result
+
 
 def test_returns_an_empty_list_for_no_strings():
     return_value = get_items_longer_than([], 1)

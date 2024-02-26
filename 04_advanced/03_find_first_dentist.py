@@ -21,7 +21,17 @@ find_first_dentist([{'name': 'Callum', 'is_dentist': True},
 
 def find_first_dentist(people):
     # Your code here
-    pass
+    if len(people) == 0:
+        return None
+    else:
+        index = 0
+        for person in people:
+            if people[index]['is_dentist'] is True:
+                return person
+            index += 1
+        return None
+                
+                
 
 
 def test_empty_list_returns_none():
