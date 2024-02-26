@@ -10,6 +10,7 @@ If you run pytest on this file, all tests should pass.
 
 
 def get_excited(text):
+    '''
     new_text = ''
     for char in text:
         if char == '.':
@@ -17,7 +18,8 @@ def get_excited(text):
         else:
             new_text += char
     return new_text
-
+    '''
+    return text.replace('.', '!')
 
 def test_empty_string_returns_empty_string():
     assert get_excited('') == ''

@@ -9,12 +9,14 @@ If you run pytest on this file, all tests should pass.
 
 
 def shrek_characters(characters):
+    '''
     shreks = []
     for character in characters:
         if 'Shrek' in character['movie']:
             shreks.append(character['name'])
     return shreks
-
+    '''
+    return [dictionary['name'] for dictionary in characters if dictionary['movie'].startswith('Shrek')]
 
 # Do not change any code below this line
 

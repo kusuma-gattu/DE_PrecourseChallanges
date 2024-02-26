@@ -14,11 +14,12 @@ If you run pytest on this file, all tests should pass.
 
 
 def triple_nums(nums):
-    tripled = []
+    '''tripled = []
     for i in range(len(nums)):
         tripled.append(3 * nums[i])
     return tripled
-
+    '''
+    return [3*x for x in nums]
 
 # Do not change any code below this line
 

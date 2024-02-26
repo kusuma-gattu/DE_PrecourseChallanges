@@ -13,10 +13,13 @@ If you run pytest on this file, all tests should pass.
 
 
 def is_sweet_enough(food_items):
+    '''
     for i in range(len(food_items)):
         if food_items[i]['flavour'] != 'sweet':
             return False
     return True
+    '''
+    return all([True if dictionary['flavour'] == 'sweet' else False for dictionary in food_items])
 
 
 # Do not change any code below this line
