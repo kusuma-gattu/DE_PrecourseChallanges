@@ -29,10 +29,25 @@ with any keys that contain lists pluralised (an 's' added to the end.)
 }
 """
 
-
+from copy import deepcopy
 def pluralise_keys(dictionary):
     # Your code here
-    pass
+    data = deepcopy(dictionary)
+    keys_remove = []
+    '''for key, value in data.items():
+        if isinstance(value, list):
+            new_key = key + 's'
+            data[new_key] = data[key]
+            keys_remove.append(key)
+    '''
+    for key, value in list(data.items()):
+        if isinstance(value, list):
+            new_key = key + 's'
+            data[new_key] = data[key]
+            del data[key]
+
+    return data
+            
 
 
 def test_empty_dictionary():

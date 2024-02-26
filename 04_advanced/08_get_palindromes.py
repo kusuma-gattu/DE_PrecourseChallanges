@@ -17,7 +17,12 @@ get_palindromes([]) # returns []
 
 def get_palindromes(words):
     # Your code here
-    pass
+    result = []
+    for word in words:
+        # here word[::-1] will reverse the word, checking the word is palindrome or not
+        if word[::-1] == word:
+            result.append(word)
+    return result
 
 
 def test_empty_list():

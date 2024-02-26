@@ -24,7 +24,19 @@ is_valid_mobile_number('0712345678!') # returns False
 
 def is_valid_mobile_number(mobile_number):
     # Your code here
-    pass
+    num_length = len(mobile_number)
+    
+    if num_length == 11:
+        return mobile_number[:2] == '07' and len(mobile_number[2:]) == 9 and mobile_number[2:].isnumeric()
+           
+    elif num_length == 13:
+        return mobile_number[:4] == '+447' and len(mobile_number[4:]) == 9 and mobile_number[4:].isnumeric()
+    
+    elif num_length == 14:
+        return mobile_number[:5] == '00447' and len(mobile_number[5:]) == 9 and mobile_number[5:].isnumeric()
+    
+    else:
+        return False
 
 
 def test_empty_string_invalid():

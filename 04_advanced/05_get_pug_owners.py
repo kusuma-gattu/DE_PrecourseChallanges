@@ -19,7 +19,11 @@ get_pug_owners([]) # returns []
 
 def get_pug_owners(dogs):
     # Your code here
-    pass
+    pug_owner_names = []
+    for index in range(len(dogs)):
+        if dogs[index]['breed'] == 'Pug':
+            pug_owner_names.append(dogs[index]['owner'])
+    return pug_owner_names
 
 
 def test_empty_list():
